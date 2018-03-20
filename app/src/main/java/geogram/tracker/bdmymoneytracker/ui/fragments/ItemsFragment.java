@@ -195,7 +195,7 @@ public class ItemsFragment extends BaseFragment implements BaseItemsView {
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.menu_remove:
-                    new AlertDialog.Builder(context)
+                    new AlertDialog.Builder(getActivity())
                             .setTitle(R.string.app_name)
                             .setMessage(R.string.confirm_remove)
                             .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
