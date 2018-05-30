@@ -93,60 +93,7 @@ public class ItemsPresenter extends MvpPresenter<BaseItemsView> {
         Realm realm = Realm.getDefaultInstance();
         RealmResults<Items> realmList = realm.where(Items.class)
                 .findAll();
-        List<String> chmo = new ArrayList<>();
-        for (int i = 1; i < 101; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                chmo.add("fizzbuzz");
-            } else if (i % 3 != 0 && i % 5 == 0) {
-                chmo.add("fizz");
-            } else if (i % 3 == 0 && i % 5 != 0) {
-                chmo.add("buzz");
-            } else {
-                chmo.add(String.valueOf(i));
-            }
-        }
-        chmo.size();
-
-        String chmio = "321*-";
-        List<Integer> list = new ArrayList<>();
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < chmio.length(); i++) {
-            if (Character.isDigit(chmio.charAt(i))) {
-                stack.push(Integer.parseInt(String.valueOf(chmio.charAt(i))));
-            }
-
-        }
-
-        List<Integer> pampampam = new ArrayList<>();
-        pampampam.add(16);
-        pampampam.add(3);
-        pampampam.add(2);
-        pampampam.add(13);
-        pampampam.add(9);
-        pampampam.add(6);
-        pampampam.add(7);
-        pampampam.add(12);
-        pampampam.add(5);
-        pampampam.add(10);
-        pampampam.add(11);
-        pampampam.add(8);
-        pampampam.add(4);
-        pampampam.add(15);
-        pampampam.add(14);
-        pampampam.add(1);
-        String str = "МАГИЧЕСКАЯ СИЛА";
-        List<String> tampam = new ArrayList<>();
-        for (int i = 0; i < pampampam.size(); i++) {
-            for (int j = 0; j < pampampam.size(); j++) {
-                if (pampampam.get(j) == i) {
-                    if (i > (str.length()-1)) {
-                        tampam.add(" ");
-                    } else {
-                        tampam.add(String.valueOf(str.charAt(i)));
-                    }
-                }
-            }
-        }
+        
 
         return realmList.size();
 
